@@ -25,6 +25,7 @@
     width: 58px;
     height: 30px;
     float: left;
+    position: relative;
 }
 .location span{
     color: red;
@@ -40,6 +41,40 @@
     color: #999999;
     margin-left: 3px;
 }
+
+.location .location-wrap{
+    width: 300px;
+    height: 240px;
+    background: #fff;
+    border: solid 1px rgb(216, 210, 210);
+    position: absolute;
+    top: 30px;
+    left: 8px;
+    display: none;
+}
+.location-wrap .location-ul{
+    float: left;
+    margin: 10px 10px;
+}
+.location-wrap .location-ul li{
+    width: 40px;
+    height: 26px;
+    /* background: #E1251B; */
+    margin: 10px 0;
+}
+.location-wrap .location-ul li:hover{
+    background:rgb(243, 236, 236);
+}
+.location-wrap .location-ul li a{
+    font-size: 13px;
+    color: #999;
+    margin-left: 5px;
+    line-height: 26px;
+}
+.location-wrap .location-ul li a:hover{
+    color: #E1251B;
+   
+}
 .navigation-list{
     float: right;
     /* width: 693px; */
@@ -47,16 +82,14 @@
     
     
 }
-.navigation-list li{
+.navigation-list>li{
     float: left;
-   border-right: solid 1px #999999;
-   
-   height: 15px;
-   /* line-height: 30px; */
-   margin-top: 7px;
-   padding: 0 15px;
-   
-
+   border-right: solid 1px #e4dcdc;
+   height: 30px;
+   /* width: 52px; */
+   line-height: 30px;
+   /* margin-top: 7px; */
+   padding: 0 18px;
 }
 .navigation-list li a{
     font-size: 13px;
@@ -68,14 +101,58 @@
 .navigation-list .nav-li-a{
     color: red;
 }
+.nav-li2{
+    /* width: 52px;
+    height: 20px; */
+    position: relative;
+    
+}
+.nav-li2:hover{
+    background: #fff;
+}
+
+.nav-li2 a:hover{
+    color: #E1251B;
+    /* background: #fff; */
+}
+.navigation-list .nav-li2 .nav-wrap{
+    width: 280px;
+    height: 130px;
+    background: #fff;
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    border: solid 1px #ccc;
+    display: none;
+    
+}
+.nav-wrap .nav-ul{
+    float: left;
+    margin-left: 10px;
+
+    
+}
+.nav-wrap .nav-ul li{
+    padding-top: 8px;
+}
+.nav-wrap .nav-ul2{
+    float: left;
+    margin-left: 60px;
+}
+.nav-wrap .nav-ul2 li{
+    padding-top: 8px;
+}
+
+
 #header{
     width:1263px;
+    border-bottom: solid 1px #ddd;
     
 }
 .header-b{
     width: 990px;
     height: 141px;
-    background: red;
+    /* background: red; */
     margin: 0 auto;
     overflow: hidden;
 }
@@ -87,18 +164,224 @@
     float: left;
 }
 .top-nav{
-width: 750px;
+width: 800px;
 height: 141px;
-background: yellow;
+/* background: yellow; */
 float: left;
 }
 .top-nav2{
-    width: 750px;
-    height: 100px;
-    background: lightcoral;
+    width: 800px;
+    height: 90px;
+    /* background: lightcoral; */
+    /* margin-left:     10px; */
+}
+.top-nav3{
+    width: 530px;
+    height: 90px;
+    float: left;
+    /* background: blueviolet; */
 }
 .top-search{
     width: 490px;
     height: 36px;
     border: solid 2px #E1251B;
+    margin-top: 23px;
+    /* float: left; */
+    margin-left: 13px;
+}
+.top-search .search-ipt{
+    width: 350px;
+    height: 32px;
+    float: left;
+    border: none;
+    margin-left: 35px;
+}
+.top-search span{
+    width: 19px;
+    height: 15px;
+    float: left;
+    /* display: block; */
+    font-size: 23px;
+    margin-top: 5px;
+
+}
+.top-search .search-btn{
+    width: 58px;
+    height: 36px;
+    background: lightblue;
+    float: right;
+    background: #E1251B;
+}
+.top-search .search-btn i{
+    /* width: 15px;
+    height: 10px; */
+    display: block;
+    font-size: 30px;
+    margin-top: 2px;
+    margin-left: 12px;
+    font-weight: 900;
+    color: #E3E4E5;
+    
+}
+.top-nav2 .cart-wrap{
+    /* display: block; */
+    width: 130px;
+    height: 36px;
+    border: solid 1px #d7dbdf;
+    float: left;
+    margin-top: 23px;
+    /* margin-left: 10px; */
+}
+.top-nav2 .cart-wrap:hover{
+    border-color:#E1251B;
+}
+.top-nav2 .cart span{
+    float: left;
+    color:#E1251B;
+    margin:6px 11px;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.top-nav2 .cart p{
+    color: #E1251B;
+    font-size: 13px;
+    margin-top: 8px;
+}
+.top-list{
+    margin-left: 13px;
+}
+.top-list li {
+    float: left;
+    padding-right: 10px;
+    margin-top:5px;
+}
+.top-list li a{
+    color: #999999;
+}
+.top-list .list-li a{
+    color: #E1251B;
+}
+.top-list li a:hover{
+    color: #E1251B;
+}
+.code-jd{
+    width: 76px;
+    height: 76px;
+    float: left;
+    margin-top: 5px;
+    margin-left: 53px;
+    box-shadow:0px 3px 8px #909090;
+}
+.code-jd img{
+    margin: auto;
+    margin-top: 8px;
+}
+.top-list2{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.top-list2 li{
+    float: left;
+    padding-right: 20px;
+}
+.top-list2 li a{
+    font-size: 15px;
+    
+}
+.top-list2 .top-list2-li a{
+    font-weight: 800;
+    color:#E1251B;
+}
+.top-list2 li a:hover{
+    color: #E1251B;
+}
+.wp{
+    width: 990px;
+    min-height: 200px;
+    background: #f4f4f4;
+    margin: 0 auto;
+    /* position:fixed; */
+    overflow: hidden;
+}
+.nav-side{
+    width: 190px;
+    background: red; 
+    position: relative;
+    margin-top: 10px;
+}
+.nav-side .nav-side-ul{
+    margin-left: 23px;
+    /* margin-top: 10px; */
+    position: relative;
+}
+.nav-side .nav-side-ul li{
+    /* margin:9px 0; */
+   
+    padding: 6px 0;
+}
+.nav-side .nav-side-ul li a{
+    font-size: 14px;
+}
+.nav-side .nav-two{
+width: 780px;
+min-height: 300px;
+position: absolute;
+left: 167px;
+top: 0;
+background: yellow;
+display:none;
+/* z-index: 100; */
+}
+.nav-two .nav-two2{
+    width: 625px;
+    height: 30px;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+.nav-side .nav-two p{
+    float: left;
+    width: 90px;
+    background: #333333;
+    margin-left: 10px;
+    text-align: center;
+    height: 25px;
+}
+.nav-side .nav-two p:hover{
+    background: #E1251B;
+}
+
+.nav-side .nav-two p a{
+    color: #ffff;
+    line-height: 25px;
+}
+.nav-two3{
+    width: 560px;
+    height: 60px;
+    margin-left: 60px;
+    /* background: blue; */
+}
+.nav-two3 h3{
+    float: left;
+    line-height: 30px;
+    font-size: 13px;
+    font-weight: 550;
+}
+.nav-two3 h3:hover{
+    color: #E1251B;
+}
+.nav-two3 .nav-two3-ul{
+    width: 500px;
+    float: left;
+}
+.nav-two3-ul li{
+    float: left;
+    margin: 0 10px;
+}
+.nav-two .nav-two3 .nav-two3-ul li a{
+    font-size: 12px;
+    color: #9a9da0;
+}
+.nav-two3 .nav-two3-ul li a:hover{
+    color: #E1251B;
 }
