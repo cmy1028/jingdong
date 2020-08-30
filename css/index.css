@@ -296,54 +296,58 @@ float: left;
 .top-list2 li a:hover{
     color: #E1251B;
 }
+#list-extend{
+    width: 1263px;
+    background: #f4f4f4;
+}
+
 .wp{
     width: 990px;
-    min-height: 200px;
+    height: 445px;
     background: #f4f4f4;
     margin: 0 auto;
     /* position:fixed; */
-    overflow: hidden;
+    /* overflow: hidden; */
+    position: relative;
 }
 .nav-side{
     width: 190px;
-    background: red; 
+    background: #fff; 
     position: relative;
     margin-top: 10px;
+    float: left;
 }
 .nav-side .nav-side-ul{
-    margin-left: 23px;
-    /* margin-top: 10px; */
+    margin-left: 23px; 
     position: relative;
 }
 .nav-side .nav-side-ul li{
-    /* margin:9px 0; */
-   
-    padding: 6px 0;
+    padding: 3px 0;
 }
 .nav-side .nav-side-ul li a{
     font-size: 14px;
 }
 .nav-side .nav-two{
-width: 780px;
+width: 820px;
 min-height: 300px;
 position: absolute;
-left: 167px;
+left: 169px;
 top: 0;
-background: yellow;
+background: #fff;
 display:none;
-/* z-index: 100; */
+z-index: 3;
 }
 .nav-two .nav-two2{
-    width: 625px;
+    width: 600px;
     height: 30px;
-    margin-left: 15px;
+    margin-left: 13px;
     margin-top: 15px;
 }
 .nav-side .nav-two p{
     float: left;
     width: 90px;
     background: #333333;
-    margin-left: 10px;
+    margin-left: 8px;
     text-align: center;
     height: 25px;
 }
@@ -384,4 +388,357 @@ display:none;
 }
 .nav-two3 .nav-two3-ul li a:hover{
     color: #E1251B;
+}
+.nav-two .nav-two1{
+    float: left;
+}
+.nav-two .nav-brand{
+    float: left;
+    width: 170px;
+    min-height:300px;
+    /* background: blue; */
+    margin-left: 7px;
+    margin-top: 16px;
+}
+.nav-brand img{
+    width: 77px;
+    height: 35px;
+    /* float: left; */
+    /* padding-left: 2px; */
+    
+}
+.nav-brand-img{
+    float: left;
+    padding-bottom: 3px;
+    padding-left: 2px
+}
+.nav-brand-img2{
+    margin-left: 3px;
+    margin-top: 160px;
+}
+.nav-brand .nav-brand-img2 img{
+    width:156px;
+    height:120px;
+}
+.nav-brand-img3{
+    margin-left: 3px;
+    margin-top: 2px;
+}
+.nav-brand .nav-brand-img3 img{
+    width:156px;
+    height:120px;
+}
+
+/* 轮播图 */
+
+.swiper-container {
+    width: 570px;
+    height: 435px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: lightcoral;
+    float: left;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  }
+  .swiper-slide img{
+    width: 570px;
+    height: 435px;
+  }
+  .nav-side3{
+      width: 197px;
+      height: 435px;
+      background:#fff;
+      float: left;
+      margin-left: 20px;
+      margin-top: 10px;
+  }
+  .nav-side4{
+      width: 50px;
+      height: 50px;
+      float: left;
+      /* border-radius: 100px; */
+      /* background: lightblue; */
+      margin-top: 15px;
+      /* margin-left: 23px; */
+  }
+  .nav-side4 img{
+      width: 40px;
+      height: 40px;
+      border-radius: 100px;
+  }
+  .nav-side5{
+      width: 100px;
+      height: 40px;
+      float: left;
+      /* background: red; */
+      margin-top: 15px;
+      /* margin-left: 5px; */
+  }
+  .nav-side5-ul{
+      margin-top: 5px;
+  }
+  .nav-side2{
+      width: 171px;
+      height: 100px;
+      /* background: sandybrown; */
+      overflow: hidden;
+      border-bottom: solid 0.5px #eeeeee;
+      margin-left: 15px;
+  }
+  .nav-side5 li{
+      float: left;
+      padding: 0 3px;
+      color: #666666;
+  }
+  .nav-side2 .wlf{
+      width: 70px;
+      height: 25px;
+      background: red;
+      margin-top: 10px;
+      margin-left: -48px;
+      border-radius: 13px;
+      float: left;
+      text-align: center;
+      line-height: 25px;
+      transition:0.5s;
+      
+  }
+  .menber{
+      width: 75px;
+      height: 25px;
+      float: left;
+      background: #363634;
+      border-radius: 13px;
+      text-align: center;
+      line-height: 25px;
+      margin-top: 10px;
+      margin-left: 10px;
+      transition:0.5s;
+  }
+  .nav-side2 .wlf span{
+      color: seashell;
+  }
+  .nav-side2 .menber span{
+    color: #e5d790;
+  }
+  .nav-side2 .menber:hover{
+      background: #E1251B;
+      color: #E3E4E5;
+  }
+  .nav-side2 .wlf:hover{
+    background: #E1251B;
+  }
+  .notice-wrap b{
+      font-weight: 800;
+      font-size: 14px; 
+      margin-left: 14px;   
+  } 
+  .notice-t span{
+      margin-left: 63px;
+      color: #999999;
+  }
+  .notice-t{
+    margin-top: 11px;
+  }
+  .notice-s{
+      width: 160px;
+      height: 16px;
+      margin-bottom: 6px;
+      /* margin-left: 15px; */
+      
+  }
+  .notice-w{
+      width:160px ;
+      height: 95px;
+    margin-top: 9px;
+    border-bottom: solid 1px #eeeeee;
+    /* background: red; */
+    margin-left: 17px;
+  }
+  .notice-s p{
+    width: 35px;
+    height: 16px;
+    color: #e1251b;
+    background-color: rgba(225,37,27,.08);
+    
+    float: left;
+    text-align: center;
+  }
+  .notice-s a{
+      float: left;
+      margin-left: 8px;
+  }
+ .notice-w .notice-s a:hover{
+     color: #E1251B;
+ }
+ .service_entry{
+     width:180px;
+     height: 200px;
+     /* background: yellow;  */
+     margin-left: 5px;  
+     margin-top: 5px;
+     position: relative;
+ }
+ .service_entry dl{
+     width: 60px;
+     height: 50px;
+     float: left;
+     text-align: center;
+     /* padding-right: 25px; */
+ }
+ .service_entry dl dt{
+     font-size: 30px;
+ }
+ .service_entry2{
+    width:190px;
+    height: 200px;
+    background: chartreuse;
+    position: absolute;
+    /* display: none; */
+    top: 195px;
+    left: 0;
+    z-index: 4;
+
+}
+
+.service_entry2 .menu-wp a:hover{
+    color: #E1251B;
+    
+}
+.seckill-wp{
+    width: 1000px;
+    height: 800px;
+}
+.bourn-wp{
+    width: 192px;
+    height: 26px;
+}
+.bourn-wp input{
+    width: 100px;
+    float: left;
+    
+}
+.bourn-wp p{
+    float: left;
+    width: 59px;
+    margin-left: 13px;
+    margin-top: 3px;
+}
+.bourn-wp2{
+    width: 164px;
+    height: 15px;
+    border: solid 1px;
+    margin: 0 auto;
+    color: #999;
+    text-align: center;
+}
+.menu-wp{
+    margin-top: 6px;
+    margin-left: 20px;
+}
+.menu-wp a{
+    padding-right: 28px;
+}
+.menu-wp2{
+    margin-top: 17px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+.menu-wp2 b{
+    margin-left: 8px;
+}
+.Hotel-query{
+    width: 60px;
+    height: 20px;
+    float: left;
+    background: #e40015;
+    border-radius: 13px;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+.Hotel-jd{
+    float: left;
+    margin-top:10px;
+    margin-left: 20px;
+    color: #527cdb;
+}
+.wp-con{
+    width: 190px;
+    height: 160px;
+    background: red;
+    display: none;
+}
+.wp-con1{
+    width: 190px;
+    height: 170px;
+    background: red;
+    overflow: hidden;
+}
+.wp-city{
+    margin-top: 15px;
+}
+.wp-city span{
+    margin-left: 10px;
+}
+.radio-wp input{
+    margin-left: 12px;
+}
+.wp-route{
+    width: 160px;
+    height: 20px;
+    /* float: left; */
+    margin-top: 10px;
+}
+.wp-route input{
+    width: 100px;
+    float: left;
+    margin-left: 10px;
+}
+.wp-route p{
+    float: left;
+    margin-left: 10px;
+    margin-top: 3px;
+    color: #666;
+}
+.wp-route1{
+    width: 160px;
+    height: 20px;
+    /* float: left; */
+    /* margin-top: 10px; */
+}
+.wp-route1 input{
+    width: 100px;
+    float: left;
+    margin-left: 10px;
+}
+.wp-route1 p{
+    float: left;
+    margin-left: 10px;
+    margin-top: 3px;
+    color: #666;
+    
+}
+.wp-route2{
+    width: 160px;
+    height: 20px;
+    /* float: left; */
+    margin-top: 10px;
+}
+.wp-route2 input{
+    width: 100px;
+    float: left;
+    margin-left: 10px;
+}
+.wp-route2 p{
+    float: left;
+    margin-left: 10px;
+    margin-top: 3px;
+    color: #666;
 }
