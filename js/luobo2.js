@@ -1,11 +1,9 @@
-var swiper = new Swiper('#swipe1', {
+var swiper = new Swiper('#swipe2', {
+    slidesPerView: 3,
     spaceBetween: 30,
-    centeredSlides: true,
-    effect : 'fade',
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
-    },
+    slidesPerGroup: 3,
+    loop: true,
+    loopFillGroupWithBlank: true,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,

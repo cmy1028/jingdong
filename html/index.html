@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../font_1/iconfont.css">
     <link rel="stylesheet" href="../css/swiper.min.css">
     <link rel="stylesheet" href="../font_9/iconfont.css">
+    <link rel="stylesheet" href="../css/lunbo02.css">
+    <link rel="stylesheet" href="../css/luobo3.css">
 </head>
 
 <body>
@@ -190,6 +192,7 @@
         </div>
     </div>
 
+ <!-- 倒计时+轮播 -->
     <div id="list-extend">
         <div class="wp">
             <!-- 侧边栏导航 -->
@@ -1502,7 +1505,7 @@
                 </ul>
             </div>
             <!-- 轮播图 -->
-            <div class="swiper-container">
+            <div class="swiper-container" id="swipe1">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide"><img src="../img/12.jpg" alt=""></div>
                   <div class="swiper-slide"><img src="../img/13.jpg" alt=""></div>
@@ -1616,6 +1619,7 @@
                             <a href="">机票</a>
                             <a href="">酒店</a>
                         </div>
+                        <div class="wp-con-wrap">
                         <div class="wp-con">
                             <div class="menu-wp2">
                                 <span>国内/港澳办</span>
@@ -1639,7 +1643,7 @@
                                 <div class="Hotel-jd">订酒店上京东</div>
                             </div>
                         </div>
-                        <div class="wp-con1">
+                        <div class="wp-con">
                             <div class="wp-city">
                                 <span>国内机票</span>
                                 <span>国际/港澳台</span>
@@ -1666,16 +1670,255 @@
                                 <div class="Hotel-jd">当季热门查询</div>
                             </div>
                         </div>
-                        <div class="wp-con2"></div>
+                        <div class="wp-con">
+                            <div class="wp-city2">
+                                <span>话费充值</span>
+                                <span>流量充值</span>
+                                <span>套餐变更</span>
+                            </div>
+                            <div class="bourn-wp1">
+                                <p>号码</p>
+                                <input type="text" placeholder="支持部分地区移动">
+                            </div>
+                            <div class="bourn-wp1">
+                                <p>月费</p>
+                                <input type="text" placeholder="138元">
+                            </div>
+                            <div class="show-l"><p>500分钟1G流量</p></div>
+                            <div class="show-s"><span>办理变更</span></div>
+                            <div class="show-h">
+                                <div class="show-t">
+                                    <span>HOT</span>
+                                </div>
+                                <a href="">中国联通199全国不限量</a>
+                            </div>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="seckill-wp"></div>
+    <div id="seckill-e">
+        <div class="seckill-wp">
+            <div class="cd-wp">
+                <div class="cd-jd">
+                    京东秒杀
+                </div>
+                <div class="cd-time">
+                    <strong>10:00</strong>点场 倒计时
+                </div>
+                <div class="cd-timer">
+                    <span class="timer-h"></span> 
+                    <span class="timer-m"></span>
+                    <span class="timer-s"></span>
+                </div>
+            </div>
+            <div class="swiper-container" id="swipe2">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                      <div class="sp-wp">
+                          <img src="../img/01tupian.jpg" alt="">
+                          <p>二手95新 联想电脑</p>
+                          <div class="sp-price">
+                              <span>￥5899.00</span>
+                              <b>￥6199.00</b>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="sp-wp">
+                        <img src="../img/01tupian.jpg" alt="">
+                        <p>二手95新 联想电脑</p>
+                        <div class="sp-price">
+                            <span>￥5899.00</span>
+                            <b>￥6199.00</b>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="sp-wp">
+                        <img src="../img/01tupian.jpg" alt="">
+                        <p>二手95新 联想电脑</p>
+                        <div class="sp-price">
+                            <span>￥5899.00</span>
+                            <b>￥6199.00</b>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="sp-wp">
+                        <img src="../img/01tupian.jpg" alt="">
+                        <p>二手95新 联想电脑</p>
+                        <div class="sp-price">
+                            <span>￥5899.00</span>
+                            <b>￥6199.00</b>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="sp-wp">
+                        <img src="../img/01tupian.jpg" alt="">
+                        <p>二手95新 联想电脑</p>
+                        <div class="sp-price">
+                            <span>￥5899.00</span>
+                            <b>￥6199.00</b>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="sp-wp">
+                        <img src="../img/01tupian.jpg" alt="">
+                        <p>二手95新 联想电脑</p>
+                        <div class="sp-price">
+                            <span>￥5899.00</span>
+                            <b>￥6199.00</b>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">Slide 7</div>
+                  <div class="swiper-slide">Slide 8</div>
+                  <div class="swiper-slide">Slide 9</div>
+                  <div class="swiper-slide">Slide 10</div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <div class="swiper-container" id="swiper-3">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                      <div class="swiper-i">
+                        <img src="../img/25.jpg" alt="">
+                    </div>
+                    
+                    </div>
+                  <div class="swiper-slide"><img src="../img/26tupian.jpg" alt=""></div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <!-- <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> -->
+            </div>
+        </div>
+    </div>
+
+    <div id="wp-ban">
+        <div class="con-ban">
+            <div class="price-a">
+                <div class="price-b">
+                    <h2>每日特价</h2>      
+                    <ul class="price-ul">
+                        <li><a href="">精选</a></li>
+                        <li><a href="">美食</a></li>
+                        <li><a href="">百货</a></li>
+                        <li><a href="">个护</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="price-c">
+                        <img src="../img/26.jpg" alt="">
+                        <p>手机挂绳指环扣短款</p>
+                        <span>￥9.8</span>
+                        <b>已抢120件</b>
+                    </div>
+                    <div class="price-d">
+                        <dl class="price-dl">
+                            <dt><img src="../img/28.jpg" alt=""></dt>
+                            <dd>
+                                <p>简约树叶戒指开口可调</p>
+                                <span>￥9.8元</span>
+                            </dd>
+                        </dl>
+                        <dl class="price-dl">
+                            <dt><img src="../img/28.jpg" alt=""></dt>
+                            <dd>
+                                <p>简约树叶戒指开口可调</p>
+                                <span>￥9.8元</span>
+                            </dd>
+                        </dl>
+                        <dl class="price-dl">
+                            <dt><img src="../img/28.jpg" alt=""></dt>
+                            <dd>
+                                <p>简约树叶戒指开口可调</p>
+                                <span>￥9.8元</span>
+                            </dd>
+                        </dl>
+                        <dl class="price-dl">
+                            <dt><img src="../img/28.jpg" alt=""></dt>
+                            <dd>
+                                <p>简约树叶戒指开口可调</p>
+                                <span>￥9.8元</span>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="brand-log">
+                <div class="brand-wp">
+                    <h2>品牌闪购</h2>
+                    <div class="brand2">
+                        <span>MOSHNO</span>
+                        <h5>MOSHNO品牌专场</h5>
+                        <p>低至三折 | 仅剩两天</p>
+                        
+                        <img src="../img/29.jpg" alt="">
+                    </div>
+                </div>
+                <div class="brand3">
+                    <dl class="brand3-dl">
+                        <dt><img src="../img/30.png" alt=""></dt>
+                        <dd>NB品牌日</dd>
+                    </dl>
+                    <dl class="brand3-dl">
+                        <dt><img src="../img/30.png" alt=""></dt>
+                        <dd>NB品牌日</dd>
+                    </dl>
+                    <dl class="brand3-dl">
+                        <dt><img src="../img/30.png" alt=""></dt>
+                        <dd>NB品牌日</dd>
+                    </dl>
+                    <dl class="brand3-dl">
+                        <dt><img src="../img/30.png" alt=""></dt>
+                        <dd>NB品牌日</dd>
+                    </dl>
+                    <dl class="brand3-dl">
+                        <dt><img src="../img/30.png" alt=""></dt>
+                        <dd>NB品牌日</dd>
+                    </dl>
+                    <dl class="brand3-dl">
+                        <dt><img src="../img/30.png" alt=""></dt>
+                        <dd>NB品牌日</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="product-z">
+        <div class="product-r">
+            <div class="product-w">
+                <img src="../img/31.png" alt="">
+            </div>
+            <div class="product-list-zd">
+                <div class="comp-a">
+                    <h2>笔记本电脑</h2>
+                    <img src="../img/32.jpg" alt="">
+                </div>
+                <div class="comp-b">
+                    <img src="../img/32.jpg" alt="">
+                    <h2>笔记本电脑</h2>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="../js/jquery.min.js"></script>
     <script src="../js/swiper.min.js"></script>
     <script src="../js/lunbo1.js"></script>
+    <script src="../js/luobo2.js"></script>
+    <script src="../js/luobo3.js"></script>
     <script>
         $(function () {
             $('.nav-li2').hover(function () {
@@ -1696,13 +1939,63 @@
                 $('.nav-two', this).slideUp(50)
             })
 
-            // $('.service_entry dl:first',).hover(function(){
-            //     $('.service_entry2').show().stop().animate({
-            //         'top': 0
-            //     },500)
-                
-            // })
+
+            $('.service_entry2 .menu-wp a').hover(function(){
+                $(this).addClass('con').siblings().removeClass('con')
+                var index = $(this).index()
+                $('.wp-con').eq(index).show().siblings().hide();
+            })
+
+            $('.service_entry').find('dl:eq(0),dl:eq(1),dl:eq(2)').hover(function(){
+                    $('.service_entry2').show().stop().animate({
+                        'top': 0
+            },200)              
+            })
+            $('#list-extend').click(function(){
+                $('.service_entry2').hide().stop().animate({'height':0},2500)
+            })
         })
+
+        let a = 0
+        // let div = document.querySelector('.cd-timer')
+        let house = document.querySelector('.timer-h')
+        let min = document.querySelector('.timer-m')
+        let send = document.querySelector('.timer-s')
+        house.innerHTML = a
+        min.innerHTML = a
+        send.innerHTML = a
+        let start = new Date('2020 8-31 16:30')
+        console.log(start)
+        let timer = setInterval(()=>{
+            let now = new Date()
+            console.log(now)
+            let c = start - now
+            let s = parseInt(c/1000)%60
+            s= toS(s)
+            console.log(s)
+            let m = parseInt(c/1000/60)%60
+            m=toS(m)
+            let h = parseInt(c/1000/60/60)%60
+            h = toS(h)
+            // div.inner = h+m+s
+            house.innerHTML = h
+            min.innerHTML = m
+            send.innerHTML = s
+            // div.inner = h+m+s
+            if(start.getTime()<= now.getTime()){
+                clearInterval(timer)
+            }
+        },1000);
+        function toS(num){
+            num = num+''
+            if(num.length <2){
+                num = '0'+num
+            }
+            return num
+        }
+
+      
+        
     </script>
 </body>
 

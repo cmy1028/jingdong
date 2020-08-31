@@ -437,7 +437,7 @@ z-index: 3;
     position: absolute;
     top: 10px;
     left: 10px;
-    background: lightcoral;
+    /* background: lightcoral; */
     float: left;
   }
   .swiper-slide {
@@ -581,7 +581,7 @@ z-index: 3;
      height: 200px;
      /* background: yellow;  */
      margin-left: 5px;  
-     margin-top: 5px;
+     /* margin-top: 5px; */
      position: relative;
  }
  .service_entry dl{
@@ -597,9 +597,9 @@ z-index: 3;
  .service_entry2{
     width:190px;
     height: 200px;
-    background: chartreuse;
+    background: #fff;
     position: absolute;
-    /* display: none; */
+    display: none;
     top: 195px;
     left: 0;
     z-index: 4;
@@ -610,10 +610,7 @@ z-index: 3;
     color: #E1251B;
     
 }
-.seckill-wp{
-    width: 1000px;
-    height: 800px;
-}
+
 .bourn-wp{
     width: 192px;
     height: 26px;
@@ -672,15 +669,17 @@ z-index: 3;
 .wp-con{
     width: 190px;
     height: 160px;
-    background: red;
+    background: #fff;
     display: none;
+    margin-top: 8px;
 }
-.wp-con1{
+/* .wp-con1{
     width: 190px;
     height: 170px;
     background: red;
     overflow: hidden;
-}
+    display: none; 
+} */
 .wp-city{
     margin-top: 15px;
 }
@@ -741,4 +740,372 @@ z-index: 3;
     margin-left: 10px;
     margin-top: 3px;
     color: #666;
+}
+
+/* .wp-con2{
+    display:none;
+    width: 190px;
+    height: 170px;
+    background: yellow;
+} */
+.wp-city2{
+    margin-left: 20px;
+    margin-top: 14px;
+    margin-bottom: 10px;
+}
+.bourn-wp1{
+    width: 192px;
+    height: 26px;
+}
+.bourn-wp1 input{
+    width: 120px;
+    float: left;
+    
+}
+.bourn-wp1 p{
+    float: left;
+    width: 30px;
+    margin-left: 13px;
+    margin-top: 3px;
+}
+.show-l p{
+    margin-left: 15px;
+    color: #E1251B;
+}
+.show-s{
+    margin-left: 13px;
+    width: 65px;
+    height: 20px;
+    background: #E1251B;
+    border-radius: 13px;
+    text-align: center;
+    line-height: 20px;
+    margin-top: 5px;
+}
+.show-h{
+    margin-left: 14px;
+    margin-top: 5px;
+}
+.show-h .show-t{
+    width: 34px;
+    height: 15px;
+    background: rgb(84, 136, 235);
+    border-radius: 5px;
+    text-align: center;
+    float: left;
+
+}
+.show-h .show-t span{
+    color: #fff;
+    font-size: 9px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+.show-h a{
+    color:cornflowerblue;
+    margin-left: 6px;
+}
+
+/* 倒计时 */
+
+#seckill-e{
+    width: 1263px;
+    background: #f4f4f4;
+    overflow: hidden;
+}
+.seckill-wp{
+    width:980px;
+    height: 260px;
+    background: #fff;
+    margin: 20px auto;
+}
+.cd-wp{
+    width: 190px;
+    height: 260px;
+    background: #E1251B;
+    overflow: hidden;
+    float: left;
+}
+.cd-wp .cd-jd{
+    font-size: 28px;
+    color: #fff;
+    font-weight: 800;
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+}
+.cd-wp .cd-time{
+    margin-top: 96px;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+}
+.cd-wp .cd-time strong{
+    font-weight: 800;
+    font-size: 19px;
+}
+.cd-wp .cd-timer{
+    width: 140px;
+    height: 30px;
+    /* background: chartreuse; */
+    margin-top: 15px;
+    margin-left: 20px;
+    text-align: center;
+}
+.cd-wp .cd-timer .timer-h{
+    width: 34px;
+    height: 32px;
+    background: #2f3430;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    margin-left: 11px;
+    display: block;
+    float: left;
+}
+.cd-wp .cd-timer .timer-m{
+    width: 34px;
+    height: 32px;
+    background: #2f3430;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    margin-left: 11px;
+    display: block;
+    float: left;
+}
+.cd-wp .cd-timer .timer-s{
+    width: 34px;
+    height: 32px;
+    background: #2f3430;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    margin-left: 11px;
+    display: block;
+    float: left;
+}
+#wp-ban{
+    width: 1263px;
+    background: #f4f4f4;
+}
+.con-ban{
+    width: 990px;
+    height: 305px;
+    background: #f4f4f4;
+    margin: 0 auto;
+}
+.price-a{
+    width: 490px;
+    height: 305px;
+    background: #fff;
+    float: left;
+}
+
+.price-b{
+    width: 490px;
+    height: 60px;
+}
+.price-b h2{
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    float: left;
+    line-height: 60px;
+    margin-left: 20px;
+}
+.price-ul{
+    float: right;
+}
+.price-ul li{
+    float: left;
+    line-height: 60px;
+    padding-right: 25px;
+}
+.price-ul li a{
+    font-size: 14px;
+    color: #999;
+}
+.price-c{
+    width: 146px;
+    height: 230px;
+    background: rgba(109,126,146,.05);
+    overflow: hidden;
+    margin-left: 10px;
+    float: left;
+}
+.price-c img{
+    width: 100px;
+    height: 100px;
+    margin-left: 22px;
+    margin-top: 40px;
+}
+.price-c p{
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+.price-c span{
+    display: block;
+    color: #E1251B;
+    font-size: 18px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 8px;
+}
+.price-c b{
+    display: block;
+    text-align: center;
+}
+.price-d{
+    width: 310px;
+    height: 240px;
+    /* background: chocolate; */
+    display: block;
+    margin-left: 180px;
+}
+.price-d .price-dl{
+    width: 155px;
+    height: 74px;
+    float: left;
+    margin-bottom: 35px;
+}
+.price-dl dt img{
+    width: 74px;
+    height: 74px;
+}
+.price-dl dt{
+    margin-top: 20px;
+    float: left;
+}
+.price-dl dd{
+    margin-left: 6px;
+    width: 66px;
+    margin-top: 17px;
+    height: 32px;
+    float: left;
+}
+.price-dl dd p{
+    margin-bottom: 8px;
+}
+.price-dl dd span{
+    color: #E1251B;
+    font-weight: 700;
+    font-size: 13px; 
+}
+
+.brand-log{
+    width: 490px;
+    height: 305px;
+    background: #fff;
+    float: left;
+    margin-left:10px;
+}
+.brand-log .brand2{
+    width: 230px;
+    height:235px;
+    background: rgb(236, 235, 218);
+    margin-top: 20px;
+    margin-left: 15px;
+    overflow: hidden;
+}
+.brand-log img{
+    width: 110px;
+    height: 110px;
+
+}
+.brand-log h2{
+    width: 200px;   
+    font-weight: 800;
+    font-size: 24px;
+    margin-top: 13px;
+    margin-left: 13px;
+}
+.brand2{
+    text-align: center;
+    /* float: left; */
+}
+.brand2 span{
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 25px;
+}
+.brand2 h5{
+    font-size: 16px;
+    padding: 10px 0;
+}
+.brand2 p{
+    color: #666;
+}
+.brand2 img{
+    margin-left: 60px;
+    margin-top: 20px;
+}
+.brand3{
+    width: 210px;
+    height: 250px;
+    float: left;
+    margin-top: 45px;
+    margin-left: 30px;
+    /* background: red; */
+}
+.brand-wp{
+    float: left;
+}
+.brand3-dl img{
+    width: 80px;
+    height: 40px;
+}
+.brand3-dl{
+    width: 100px;
+    height: 60px;
+    text-align: center;
+    float: left;
+    padding-bottom: 30px;
+    
+    
+}
+.brand3-dl dd{
+    margin-top: 7px;
+    
+}
+.product-r{
+    width: 990px;
+    height: 260px;
+    margin: 0 auto;
+    /* background: red; */
+    margin-top: 20px;
+}
+#product-z{
+    width: 1263px;
+    background: #f4f4f4;
+    overflow: hidden;
+}
+.product-w{
+    width: 190px;
+    height: 260px;
+    float: left;
+}
+.product-list-zd{
+    width: 790px;
+    height: 260px;
+    background: #fff;
+    float: left;
+    margin-left: 10px;
+}
+.comp-a{
+    width: 150px;
+    height: 180px;
+    background: lightcoral;
+    margin-top: 44px;
+}
+.comp-a h2{
+    font-size: 13px;
+    text-align: center;
+}
+.comp-a img{
+    width: 150px;
+    height: 150px;
 }
