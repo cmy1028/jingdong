@@ -1142,7 +1142,8 @@ z-index: 3;
     width: 240px;
     height: 305px;
     float: left;
-    background: rgb(218, 201, 201);
+    /* background: rgb(218, 201, 201); */
+    background: linear-gradient(rgb(185, 121, 214),rgb(93, 95, 206));
 }
 .cont-spec-c h2{
     font-size: 25px;
@@ -1155,7 +1156,7 @@ z-index: 3;
     width: 240px;
     height: 315px;
     float: left;
-    /* background: red; */
+    background: #ffff;
     margin-left: 10px;
 }
 .cont-spec-d{
@@ -1237,15 +1238,21 @@ z-index: 3;
 }
 .product-list-b{
     width: 990px;
-    min-height: 300px;
-    /* background: red; */
+    height: 800px;
+    background: red;
     margin: 0 auto;
 }
 #product-list-wp{
     width: 1263px;
+    /* height: 1000px; */
     background: #f4f4f4;
     overflow: hidden;
 }
+/* .product-list-c{
+    width: 330px;
+    height: 30px;
+    background: red;
+} */
 .product-list-c h1{
     font-weight: 800;
     font-size: 30px;
@@ -1256,6 +1263,7 @@ z-index: 3;
     width: 990px;
     height: 60px;
     background: #fff;
+    margin: 0 auto;
    
 }
 .product-list-dl{
@@ -1272,24 +1280,26 @@ z-index: 3;
     font-weight: 700;
     padding: 7px 0;
 }
-.product-list-s{
+/* .product-list-s{
     width: 990px;
     min-height: 240px;
     background: lightblue;
     
-}
+} */
 .product-list-d a{
-    display: inline-block;
+    display: block;
     width: 190px;
     height: 266px;
-    background: lightgreen;
-    margin-left: 5px;
+    background: #ffff;
+    margin-left: 7px;
     margin-top: 15px;
-    /* float: left; */
+    float: left;
 }
 .product-list-d{
     width: 990px;
-    height: 550px;
+    height: 600px;
+    margin: 0 auto;
+    /* background: red; */
 }
 .product-list-w img{
     width: 120px;
@@ -1299,11 +1309,15 @@ z-index: 3;
     margin-left: 34px;
 }
 .product-list-w p{
-    margin-top: 30px;
+    width: 170px;
+    height: 50px;
+    margin-top: 23px;
     margin-left: 5px;
 }
 .product-list-w span{
     display: inline-block;
     margin-top: 17px;
     margin-left: 5px;
+    font-size: 15px;
+    color: red;
 }

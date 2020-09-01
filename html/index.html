@@ -1498,7 +1498,7 @@
 
     <!-- 为你推荐 -->
     <div id="product-list-wp">
-        <div class="product-list-b">
+        <!-- <div class="product-list-b"> -->
             <div class="product-list-c">
                 <h1>为你推荐</h1>
             </div>
@@ -1529,36 +1529,36 @@
                 </dl>
             </div>
 
-            
-                <div class="product-list-d">
-                    <a href="" class="product-list-w">
-                        <img src="" alt="">
-                        <p>御邪黄金999足金金珠纯金转运珠3D硬金百搭万能针式御心链手链</p>
-                        <span>￥ 198.00</span>
-                    </a>
-                    <a href="" class="product-list-w">
-                        <img src="" alt="">
-                        <p>御邪黄金999足金金珠纯金转运珠3D硬金百搭万能针式御心链手链</p>
-                        <span>￥ 198.00</span>
-                    </a>
-                    <a href="" class="product-list-w">
-                        <img src="" alt="">
-                        <p>御邪黄金999足金金珠纯金转运珠3D硬金百搭万能针式御心链手链</p>
-                        <span>￥ 198.00</span>
-                    </a>
-                    <a href="" class="product-list-w">
-                        <img src="" alt="">
-                        <p>御邪黄金999足金金珠纯金转运珠3D硬金百搭万能针式御心链手链</p>
-                        <span>￥ 198.00</span>
-                    </a>
-                    <a href="" class="product-list-w">
-                        <img src="" alt="">
-                        <p>御邪黄金999足金金珠纯金转运珠3D硬金百搭万能针式御心链手链</p>
-                        <span>￥ 198.00</span>
-                    </a>
-                </div>
-            
-        </div>
+
+            <div class="product-list-d">
+                <a href="" class="product-list-w">
+                    <img src="" alt="">
+                    <p>御邪黄金999足金金珠纯金转运珠3D硬金百搭万能针式御心链手链</p>
+                    <span>￥ 198.00</span>
+                </a>
+                <a href="" class="product-list-w">
+                    <img src="" alt="">
+                    <p>御邪黄金999足金金珠纯金转运珠3D硬金百搭万能针式御心链手链</p>
+                    <span>￥ 198.00</span>
+                </a>
+                <a href="" class="product-list-w">
+                    <img src="" alt="">
+                    <p>御邪黄金999足金金珠纯金转运珠3D硬金百搭万能针式御心链手链</p>
+                    <span>￥ 198.00</span>
+                </a>
+                <a href="" class="product-list-w">
+                    <img src="" alt="">
+                    <p>御邪黄金999足金金珠纯金转运珠3D硬金百搭万能针式御心链手链</p>
+                    <span>￥ 198.00</span>
+                </a>
+                <a href="" class="product-list-w">
+                    <img src="" alt="">
+                    <p>御邪黄金999足金金珠纯金转运珠3D硬金百搭万能针式御心链手链</p>
+                    <span>￥ 198.00</span>
+                </a>
+            </div>
+
+        <!-- </div> -->
     </div>
     <script src="../js/axios.min.js"></script>
     <script src="../js/jquery.min.js"></script>
@@ -1602,28 +1602,28 @@
             $('#list-extend').click(function () {
                 $('.service_entry2').hide().stop().animate({ 'height': 0 }, 2500)
             })
-                let uid = localStorage.getItem('id')
-                console.log(uid)
+            let uid = localStorage.getItem('id')
+            console.log(uid)
             // 获取商品列表
-            $.get("http://jx.xuzhixiang.top/ap/api/productlist.php",{
-                
-            },data=>{
+            $.get("http://jx.xuzhixiang.top/ap/api/productlist.php", {
+                uid
+            }, data => {
                 console.log(data.data)
                 let arr = data.data
                 let html = ''
                 arr.forEach(v => {
-                    html+=`
+                    html += `
                     <a href="" class="product-list-w">
                         <img src="${v.pimg}" alt="">
-                        <p>${v.pname}</p>
+                        <p>${v.pdesc}</p>
                         <span>${v.pprice}</span>
                     </a>
                     `
-                    console.log(html)
+                    // console.log(html)
                     let product = document.querySelector('.product-list-d')
                     // $('.product-list-s').html = html
                     product.innerHTML = html
-                    
+
                 });
             })
 
@@ -1666,9 +1666,9 @@
             }
             return num
         }
-        
-            
-        
+
+
+
 
     </script>
 </body>
