@@ -1,0 +1,29 @@
+
+
+  #swipe-a {
+    width: 229px;
+    height: 300px;
+    /* padding-top: 50px; */
+    /* padding-bottom: 50px; */
+    /* background: purple; */
+  }
+
+  #swipe-a .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 120px;
+    height: 200px;
+
+  }
+  #swipe-a .swiper-slide img{
+      display: block;
+      width: 100px;
+      height: 100px;
+  }
+  .swiper-slide .swiper-slide-dl h2{
+      /* width: 300px; */
+      font-size: 13px;
+  }
+  .swiper-slide .swiper-slide-dl p{
+      color: red;
+  }

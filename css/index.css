@@ -1098,14 +1098,212 @@ z-index: 3;
 .comp-a{
     width: 150px;
     height: 180px;
-    background: lightcoral;
     margin-top: 44px;
+    float: left;
+    margin-right: 35px;
 }
 .comp-a h2{
     font-size: 13px;
     text-align: center;
+    margin-bottom: 15px;
 }
 .comp-a img{
     width: 150px;
     height: 150px;
+}
+.comp-b{
+    float: left;
+    width: 150px;
+    height: 180px;
+    /* margin-top:14px; */
+}
+.comp-b img{
+    width: 150px;
+    height: 150px;
+}
+.comp-b h2{
+    font-size: 13px;
+    text-align: center;
+}
+#cont-spec{
+    width: 1263px;
+    height: 315px;
+    background: #f4f4f4;
+    overflow: hidden;
+}
+
+.cont-spec-a{
+    width: 990px;
+    height: 315px;
+    /* background: yellow; */
+    margin: 20px auto;
+}
+.cont-spec-b{
+    width: 240px;
+    height: 305px;
+    float: left;
+    background: rgb(218, 201, 201);
+}
+.cont-spec-c h2{
+    font-size: 25px;
+    font-weight: 800;
+    margin-top: 14px;
+    margin-left: 15px;
+}
+
+.cont-spec-c{
+    width: 240px;
+    height: 315px;
+    float: left;
+    /* background: red; */
+    margin-left: 10px;
+}
+.cont-spec-d{
+    width: 55px;
+    height: 20px;
+    background: #999;
+    float: left;
+    margin: 0 12px;
+    text-align: center;
+    border-radius: 13px;
+    line-height:20px;
+    margin-top: 14px;
+}
+.dl-wp{
+    width: 230px;
+    height: 212px;
+    /* background: chartreuse; */
+    overflow: hidden;
+}
+.dl-wp2{
+    width: 220px;
+    height: 51px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.dl-wp2 dt img{
+    width: 60px;
+    height: 60px;
+}
+.dl-wp2 dt{
+    float: left;
+}
+.dl-wp2 dd{
+    float: left;
+    margin-left: 10px;
+    margin-top: 15px;
+       
+}
+.cont-spec-f{
+    width: 240px;
+    height: 305px;
+    float: left;
+    background: #fff;
+    margin-left: 10px; 
+}
+.cont-spec-f h2{
+    font-size: 25px;
+    font-weight: 800;
+    margin-top: 14px;
+    margin-left: 15px;
+}
+.shop-a{
+    width: 240px;
+    height: 113px;
+    background: rgb(243, 241, 243);
+    margin-top: 15px;
+}
+.shop-b{
+    
+    float: left;
+}
+.shop-b p{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.shop-b span{
+    display: block;
+    margin-top: 36px;
+    margin-left: 20px;
+}
+.shop-c{
+    float: left;
+}
+.shop-c img{
+    width: 75px;
+    height: 75px;
+    margin-top: 15px;
+    margin-left: 25px;
+}
+.product-list-b{
+    width: 990px;
+    min-height: 300px;
+    /* background: red; */
+    margin: 0 auto;
+}
+#product-list-wp{
+    width: 1263px;
+    background: #f4f4f4;
+    overflow: hidden;
+}
+.product-list-c h1{
+    font-weight: 800;
+    font-size: 30px;
+    text-align: center;
+    margin: 25px 0;
+}
+.product-list-wp2{
+    width: 990px;
+    height: 60px;
+    background: #fff;
+   
+}
+.product-list-dl{
+    width: 140px;
+    height: 50px;
+    /* background: violet; */
+    text-align: center;
+    margin-left: 23px;
+    float: left;
+}
+
+.product-list-dl dt{
+    font-size: 18px;
+    font-weight: 700;
+    padding: 7px 0;
+}
+.product-list-s{
+    width: 990px;
+    min-height: 240px;
+    background: lightblue;
+    
+}
+.product-list-d a{
+    display: inline-block;
+    width: 190px;
+    height: 266px;
+    background: lightgreen;
+    margin-left: 5px;
+    margin-top: 15px;
+    /* float: left; */
+}
+.product-list-d{
+    width: 990px;
+    height: 550px;
+}
+.product-list-w img{
+    width: 120px;
+    height: 120px;
+    background: red;
+    margin-top: 30px;
+    margin-left: 34px;
+}
+.product-list-w p{
+    margin-top: 30px;
+    margin-left: 5px;
+}
+.product-list-w span{
+    display: inline-block;
+    margin-top: 17px;
+    margin-left: 5px;
 }

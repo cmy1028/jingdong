@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../font_5/iconfont.css">
+</head>
+
+<body>
+    <div id="logo">
+        <div class="logo-jd">
+            <img src="../img/32.png" alt="">
+            <span>欢迎登陆</span>
+        </div>
+        <div class="logo-lg">
+            <p>登陆页面，调查问卷</p>
+        </div>
+    </div>
+    <div class="notice ">
+        <p>依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号验证！ 新版《京东隐私政策》已上线，将更有利于保护您的个人隐私。</p>
+    </div>
+    <div id="login-a">
+        <div class="login-b">
+            <div class="login-g">
+                <img src="../img/33.png" alt="">
+            </div>
+            <div class="login-s">
+                <div class="login-top">
+                    <p>京东不会以任何理由要求您转账汇款，谨防诈骗</p>
+                </div>
+                <div class="login-c">
+                    <p>扫码登陆</p>
+                    <span>账户登陆</span>
+                </div>
+                <div class="imp-wp">
+                    <div class="imp-wp2">
+                        <b class="iconfont icon-username"></b>
+                    </div>
+                    <input type="text" placeholder="邮箱/用户名/手机">
+                </div>
+                <div class="imp-wp3">
+                    <div class="imp-wp4">
+                        <b class="iconfont icon-huabanfuben
+                        "></b>
+                    </div>
+                    <input type="text" placeholder="密码">
+                </div>
+                <div class="imp-p">
+                    <p>忘记密码</p>
+                </div>
+                <div class="imp-l">
+                    <p>登陆</p>
+                </div>
+                <div class="imp-wp6">
+                    <div class="imp-qq">
+                        <span class="iconfont icon-weixin"></span>
+                        <b>微信</b> 
+                    </div>
+                    <div class="imp-wx">
+                        <span class="iconfont icon-weixin"></span>
+                        <b>微信</b> 
+                    </div>
+                    <p>立即注册</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/axios.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+        $('.imp-l p').click(function(){
+            console.log(333)
+            let username = $('.imp-wp input').val()
+            let password = $('.imp-wp3 input').val()
+            let url = "http://jx.xuzhixiang.top/ap/api/login.php"
+            $.get(url,{username,password},data=>{
+                console.log(data)
+                if(data.code==1){
+                    alert(data.msg)
+                    localStorage.setItem('token',data.data.token)
+                    localStorage.setItem('id',data.data.id)
+                    localStorage.setItem('username',data.data.username)
+                    // location.href='index.html'
+                }
+            })
+        })
+    })
+    </script>
+</body>
+
+</html>

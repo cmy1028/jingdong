@@ -1,0 +1,176 @@
+
+#logo{
+    width: 1263px;
+    height: 80px;
+    /* background: yellow; */
+}
+.logo-jd{
+    float: left;
+    margin-left: 150px;
+}
+.logo-lg{
+    float: right;
+    margin-right: 140px;
+    margin-top: 50px;
+}
+.logo-jd img{
+    float: left;
+}
+.logo-jd span{
+    float: left;
+    margin-top: 20px;
+    font-size: 23px;
+    font-weight: 400;
+    margin-left: 25px;
+    
+}
+.logo-lg p{
+    color: #999999;
+}
+.notice{
+    width: 1263px;
+    height: 50px;
+    background: #FFF8F0;
+}
+.notice p{
+    color: #999999;
+    text-align: center;
+    line-height: 50px;
+}
+.login-b img{
+    margin: 0 auto;
+}
+#login-a{
+    width: 1263px;
+    height:475px;
+    background: #E93854;
+    position: relative;
+}
+.login-b{
+    width: 990px;
+    height: 475px;
+
+}
+.login-s{
+    width: 346px;
+    height: 400px;
+    background: #fff;
+    position: absolute;
+    top: 10px;
+    right:160px;
+}
+.login-top{
+    width: 346px;
+    height: 40px;
+    background: #fff8f0;
+    text-align: center  ;
+}
+.login-top p{
+    line-height: 40px;
+    color: #666;
+}
+.login-c{
+    width: 346px;
+    height: 55px;
+    /* background: chartreuse; */
+    text-align: center;
+    border-bottom: solid 1px #666;
+}
+.login-c p{
+    float: left;
+}
+.login-c span{
+    float: left;
+}
+.login-c p{
+    width: 172px;
+    height: 18px;
+    /* line-height: 55px; */
+    font-size: 17px;
+    border-right: solid 1px #666;
+    margin-top: 17px;
+}
+.login-c span{
+    width: 172px;
+    height: 18px;
+    line-height: 55px;
+    font-size: 17px;
+    color: #E4393c;
+    font-weight: 800;
+}
+.imp-wp2{
+    float: left;
+    width: 39px;
+    height: 38px;
+    background: #cfcece;
+    text-align: center;
+    line-height: 38px;
+    margin-left: 23px;
+
+}
+.imp-wp2 b{
+    color: darkgray;
+}
+.imp-wp input{
+    float: left;
+    width: 250px;
+    height: 32px;
+}
+.imp-wp{
+    width: 346px;
+    height: 60px;
+    margin-top: 30px;
+}
+.imp-wp3{
+    width: 346px;
+    height: 60px;
+    /* margin-top: 88px; */
+}
+.imp-wp4{
+    float: left;
+    width: 39px;
+    height: 38px;
+    background: #cfcece;
+    text-align: center;
+    line-height: 38px;
+    margin-left: 23px;
+
+}
+.imp-wp4 b{
+    color: darkgray;
+}
+.imp-wp3 input{
+    float: left;
+    width: 250px;
+    height: 32px;
+}
+.imp-p p{
+    margin-left: 270px;
+}
+.imp-l{
+    width: 304px;
+    height: 33px;
+    background: #E4393c;
+    /* margin-top: 30px; */
+    text-align: center;
+    line-height: 30px;
+    margin:30px auto;
+}
+.imp-qq{
+    width: 60px;
+    height: 18px;
+    float: left;
+    margin:0 20px;
+    border-right: solid 1px #cfcece;
+    
+}
+.imp-wx{
+    width: 50px;
+    height: 18px;
+    float: left;
+
+}
+.imp-wp6 p{
+    float: right;
+    margin-right: 25px;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/reg.css">
+</head>
+<body>
+    <div id="logo">
+        <div class="logo-jd">
+            <img src="../img/32.png" alt="">
+            <span>欢迎注册</span>
+        </div>
+        <div class="logo-lg">
+            <a href="login.html">已有账号？请登录</a>
+        </div>
+    </div>
+    <div class="reg-ipt">
+        <h1>欢迎注册</h1>
+        <div class="reg-ipt2">
+            <span>用户名</span>
+            <input type="text">
+        </div>
+        <div class="reg-ipt3">
+            <span>密码</span>
+            <input type="text" class="ipt-passsword">
+        </div>
+
+        <p class="point"></p>
+
+        <div class="reg-btn">
+            <input type="button" value="注册" class="btn">
+        </div>
+        <!-- <div class="login-z">
+            <p>已有账号？ 直接登录</p>
+        </div> -->
+    </div>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/axios.min.js"></script>
+    <script>
+        $(function(){
+
+        
+        var str='';  //定义一个空变量用来存储密码
+	    $('.reg-ipt3 input').keyup(function(){
+        var value=$(this).val();	//输入的时候获取输入框的值	
+        console.log(value)
+		str+=value.substr(value.length-1,1); //获取最后一个字符加到到str,因为除了最后一个字符，其他的已经为*
+		$(this).val(value.replace(/./g,'*')) //输入框内容全部变为*
+		console.log(str); //str即为输入框的内容
+    })
+
+    let isusername = false
+    let ispassword = false
+    let point = document.querySelector('.reg-ipt p')
+    $('.reg-ipt2 input').change(function(){
+        let val = $('.reg-ipt2 input').val()
+        console.log(val)
+        let reg = /^[a-zA-Z0-9]{4,16}$/;
+        if (reg.test(val)) {
+                
+                isusername = true
+                // $('.reg-ipt p').html=''
+                // isPoint.innerHTML = ''
+                point.innerHTML = ''
+            } else {
+                isusername = false
+                point.innerHTML  = '用户名格式错误'
+            }
+            check()
+        })
+        $('.reg-ipt3 input').change(function(){
+            let val = $('.reg-ipt3 input').val()
+            console.log(val)
+            let reg2 = /^.{6,}$/;
+            if(reg2.test(val)){
+                ispassword=true
+                point.innerHTML  = ''
+            } else{
+                ispassword = false
+                point.innerHTML = '请输入六位数字密码'
+            }
+            check()
+        })
+        check()
+        function check(){
+            if(isusername && ispassword){
+                $('.btn').removeAttr("disabled")
+                $('.reg-btn input').css('background','red')
+            }else{
+                $('.btn').attr("disabled","disabled")
+            }
+        }
+        check()
+        $('.reg-btn input').click(function(){
+            console.log(553)
+            let username = $('.reg-ipt2 input').val()
+            let password = $('.reg-ipt3 input').val()
+            let url='http://jx.xuzhixiang.top/ap/api/reg.php'
+            $.get(url,{username,password},data=>{
+                // Sa1234
+                // 123456
+                console.log(data)
+                if(data.code==1){
+                    alert('注册成功')
+                }else{
+                    alert('用户名已存在')
+                }
+            })
+        })
+    })
+
+    </script>
+</body>
+</html>
