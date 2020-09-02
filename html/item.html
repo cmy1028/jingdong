@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/item.css">
+</head>
+
+<body>
+    <div id="extend-top">
+        <div class="banner-wp">
+            <div class="fl">
+                <span>京东首页</span>
+                <span>北京</span>
+            </div>
+            <div class="nav-list">
+                <ul class="nav-list-ul">
+                    <li>
+                        <a href="">你好，请登录</a>
+                        <a href="" class="nav-list-a">免费注册</a>
+                    </li>
+                    <li><a href="">我的订单</a></li>
+                    <li><a href="">我的京东</a></li>
+                    <li><a href="">京东会员</a></li>
+                    <li><a href="">企业采购</a></li>
+                    <li><a href="">客户服务</a></li>
+                    <li><a href="">网站导航</a></li>
+                    <li class="nav-list"><a href="">手机京东</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="extend-nav">
+        <div class="banner-wp2">
+            <div class="log-jd">
+                <img src="../img/34.png" alt="">
+            </div>
+            <div class="classify">
+                <p>全部分类</p>
+            </div>
+            <div class="search-wp">
+                <div class="search-ipt">
+                    <input type="text">
+                    <div class="search-btn-a">
+                        <p>搜全站</p>
+                    </div>
+                    <div class="search-btn-b">
+                        <p>搜本店</p>
+                    </div>
+                </div>
+                <div class="nav-list3">
+                    <ul>
+                        <li>电子烟戒烟</li>
+                        <li>打火机充电</li>
+                        <li>创意礼品</li>
+                        <li>生日礼物</li>
+                        <li>绿植</li>
+                        <li>美妆礼品</li>
+                        <li>鲜花</li>
+                        <li>戒烟器</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cart">
+                <p><a href="cart.html">我的购物车</a></p>
+                <span>0</span>
+            </div>
+        </div>
+    </div>
+    <div class="interval"></div>
+
+    <div class="item-wp">
+        <!-- <div class="product-picture">
+            <img src="" alt="">
+        </div>
+        <div class="content-wp">
+            <div class="name-wp">
+                <img src="../img/35.png" alt="">
+                <p>缔晶 七夕情人节礼物送女友老婆缔晶 七夕情人节礼物送女友老婆</p>
+            </div>
+            <div class="content-price">
+                <b>京东价</b>
+                <span>￥268.00元</span>
+            <div>
+            <div class="content-bourn">
+                <p>配送到</p>
+                <input type="text" placeholder="北京朝阳区三环以内">
+            </div> -->
+
+            <!-- <div class="number">
+                <input type="button" value="_" class="number-sub">
+                <input type="text" value="1" class="number-n">
+                <input type="button" value="+" class="number-push">
+                <div class="cart-btn">
+                    <button>加入购物车</button>
+                </div>
+            </div> -->
+        <!-- </div>   -->
+        </div>
+        <div class="number">
+            <input type="button" value="_" class="number-sub">
+            <input type="text" value="1" class="number-n">
+            <input type="button" value="+" class="number-push">
+            <div class="cart-btn">
+                <button>加入购物车</button>
+            </div>
+        </div>
+            <script src="../js/axios.min.js"></script>
+            <script src="../js/jquery.min.js"></script>
+
+            <script>
+                $(function () {
+                    let url = 'http://jx.xuzhixiang.top/ap/api/detail.php'
+                    let params = new URLSearchParams(location.search)
+                    let id = params.get('pid')
+                    console.log(id)
+                    $.get(url, { id }, data => {
+                        console.log(data)
+                        let obj = data.data
+                        console.log(obj)
+                        let html = `
+                                <div class="product-picture">
+                                    <img src="${obj.pimg}" alt="">
+                                </div>
+                                <div class="content-wp">
+                                    <div class="name-wp">
+                                        <img src="../img/35.png" alt="">
+                                        <p>${obj.pdesc}</p>
+                                    </div>
+                                    <div class="content-price">
+                                        <b>京东价</b>
+                                        <span>￥${obj.pprice}元</span>
+                                    <div>
+                                    <div class="content-bourn">
+                                        <p>配送到</p>
+                                        <input type="text" placeholder="北京朝阳区三环以内">
+                                    </div>
+                                    
+                                    
+                                </div>  
+                            `
+                        $('.item-wp').html(html)
+                    })
+                    // 商品数量+
+                    $('.number-push').click(function(){
+                        console.log(333)
+                        let n = $('.number-n')
+                            n.val(parseInt(n.val())+1)
+                    })
+                    // 商品数量-
+                    $('.number-sub').click(function(){
+                        console.log(333)
+                        let j = $('.number-n')
+                        if(j.val()==1){
+                            return
+                        }
+                            j.val(parseInt(j.val())-1)
+                    })
+                    let addCartBtn = document.querySelector('.cart-btn button')
+                    console.log(addCartBtn)
+                    addCartBtn.onclick =async function(){
+                        let uid = localStorage.getItem('id')
+                        let pname = $('.number-n').val()
+                        console.log(pname)
+                        let params={
+                            uid,
+                            pid:id,
+                            pname,
+                        }
+                        // let url = 'http://jx.xuzhixiang.top/ap/api/add-product.php',
+                        try {
+                            let res = await axios.get('http://jx.xuzhixiang.top/ap/api/add-product.php',{params})
+                            console.log(res.data)
+                            alert('加入购物车成功')
+                        } catch (error) {
+                            alert('加入购物车失败')
+                        }
+                        
+                    }
+                    
+                })
+                // let addCartBtn = document.querySelector('.cart-btn button')
+                //     console.log(addCartBtn)
+                //     addCartBtn.onclick =async function(){
+                //         let uid = localStorage.getItem('id')
+                //         let pname = $('.number-n').val()
+                //         console.log(pname)
+                //         let params={
+                //             uid,
+                //             pid:id,
+                //             pname,
+                //         }
+                //         // let url = 'http://jx.xuzhixiang.top/ap/api/add-product.php',
+                //         try {
+                //             let res = await axios.get('http://jx.xuzhixiang.top/ap/api/add-product.php',{params})
+                //             console.log(res.data)
+                //             alert('加入购物车成功')
+                //         } catch (error) {
+                //             alert('加入购物车失败')
+                //         }
+                        
+                //     }
+        </script>
+</body>
+
+</html>

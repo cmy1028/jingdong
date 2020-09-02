@@ -1613,7 +1613,7 @@
                 let html = ''
                 arr.forEach(v => {
                     html += `
-                    <a href="" class="product-list-w">
+                    <a href="item.html?pid=${v.pid}" class="product-list-w">
                         <img src="${v.pimg}" alt="">
                         <p>${v.pdesc}</p>
                         <span>${v.pprice}</span>
@@ -1650,11 +1650,9 @@
             m = toS(m)
             let h = parseInt(c / 1000 / 60 / 60) % 60
             h = toS(h)
-            // div.inner = h+m+s
             house.innerHTML = h
             min.innerHTML = m
             send.innerHTML = s
-            // div.inner = h+m+s
             if (start.getTime() <= now.getTime()) {
                 clearInterval(timer)
             }

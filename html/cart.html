@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+
+<body>
+    <div id="extend-top">
+        <div class="banner-wp">
+            <div class="fl">
+                <span>京东首页</span>
+                <span>北京</span>
+            </div>
+            <div class="nav-list">
+                <ul class="nav-list-ul">
+                    <li>
+                        <a href="">你好，请登录</a>
+                        <a href="" class="nav-list-a">免费注册</a>
+                    </li>
+                    <li><a href="">我的订单</a></li>
+                    <li><a href="">我的京东</a></li>
+                    <li><a href="">京东会员</a></li>
+                    <li><a href="">企业采购</a></li>
+                    <li><a href="">客户服务</a></li>
+                    <li><a href="">网站导航</a></li>
+                    <li class="nav-list"><a href="">手机京东</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="extend-nav">
+        <div class="banner-wp2">
+            <div class="log-jd">
+                <img src="../img/34.png" alt="">
+            </div>
+
+            <div class="search-wp">
+                <div class="search-ipt">
+                    <input type="text">
+                    <div class="search-btn-a">
+                        <p>搜索</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="shop-name">
+        <div class="checkbox">
+            <input type="checkbox">全选
+        </div>
+        <span>商品</span>
+        <ul class="shop-li">
+
+            <li>单价</li>
+            <li>数量</li>
+            <li>小计</li>
+            <li>操作</li>
+        </ul>
+    </div>
+    <div id="content-e">
+    <!-- <div class="content-wp">
+        <div class="content-ck">
+            <input type="checkbox">
+        </div>
+        <div class="content-img">
+            <img src="" alt="">
+        </div>
+        <div class="content-p">
+            <p>缔晶 七夕情人节礼物送女友老婆女朋友生日礼物女生纯银四叶草手链项链套装幸运草实用浪漫表白结婚纪念日
+            </p>
+        </div>
+        <div class="content-price">
+            <span>￥345.00</span>
+        </div>
+        <div class="content-ipt">
+            <input type="button" value="-" class="content-jian">
+            <input type="text" value="1" class="content-ipt-n">
+            <input type="button" value="+" class="content-plus">
+        </div>
+        <div class="content-sub">
+            <span>￥345.00</span>
+        </div>
+        <div>
+            <button class="addCartBtn">删除</button>
+        </div>
+    </div> -->
+</div>
+    <div class="close-wp">
+        <div class="close-ck">
+            <input type="checkbox">全选
+        </div>
+        <div class="close-price">
+            总价 <span>￥0.00</span>
+        </div>
+        <div class="close-btn">
+            <p>去结算</p>
+        </div>
+    </div>
+    <script src="../js/axios.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        loadList()
+        function loadList() {
+            let url = 'http://jx.xuzhixiang.top/ap/api/cart-list.php'
+            let id = localStorage.getItem('id')
+            console.log(id)
+            $.get(url, { id }, data => {
+                console.log(data.data)
+                let arr = data.data
+                let html = ''
+                arr.forEach(v => {
+                    html += `
+                <div class="content-wp">
+                    <div class="content-ck">
+                        <input type="checkbox">
+                    </div>
+                    <div class="content-img">
+                        <img src="${v.pimg}" alt="">
+                    </div>
+                    <div class="content-p">
+                        <p>${v.pdesc}</p>
+                    </div>
+                    <div class="content-price">
+                        ￥<span>${v.pprice}</span>
+                    </div>
+                    <div class="content-ipt">
+                        <input type="button" value="-" class="content-jian" data-id=${v.pid}>
+                        <input type="text" value="1" class="content-ipt-n">
+                        <input type="button" value="+" class="content-plus" data-id=${v.pid}>
+                    </div>
+                    <div class="content-sub">
+                        <span>￥345.00</span>
+                    </div>
+                    <div class="addCartBtn">
+                    <button data-id=${v.pid}>删除</button>
+                    </div>
+                </div>
+                `
+                });
+
+                $('#content-e').html(html)
+                delBtn()
+            })
+        }
+        
+        function delBtn(){
+            $('button').click(function(){
+                console.log(222)
+                let uid = localStorage.getItem('id')
+                let pid = $('button').attr('data-id')
+                console.log(pid,uid)
+                let url='http://jx.xuzhixiang.top/ap/api/cart-delete.php'
+                $.get(url,{uid,pid},data=>{
+                    console.log(data)
+                    $('.content-wp').remove()
+                })
+            })
+        }
+        function upDataNumber(){
+            let numberDel = document.querySelectorAll('.content-jian')
+            let numberAdd = document.querySelectorAll('.content-plus')
+            let iptNum = document.querySelectorAll('.content-ipt-n')
+
+            numberDel.forEach((btn,index)=>{
+                btn.onclick = function(){
+                    let iptNumber = iptNum[index]
+                    console.log(iptNumber.value)
+                    let pnum = parseInt(iptNumber.value)+1
+                    let uid = localStorage.getItem('id')
+                    let pid = $('.content-plus').attr('data-id')
+                    let url = 'http://jx.xuzhixiang.top/ap/api/cart-update-num.php'
+                    let params={
+                        pnum,
+                        uid,
+                        pid,
+
+                    }
+                    axios.get(url,)
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>

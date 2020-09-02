@@ -1,0 +1,220 @@
+#extend-top{
+    width: 100%;
+    height: 30px;
+    background: #e3e4e5;
+}
+.banner-wp{
+    width: 990px;
+    height: 30px;
+    background: #e3e4e5;
+    margin: 0 auto;
+}
+.fl{
+    height:30px;
+    float: left;
+}
+.fl span{
+    line-height: 30px;
+    margin-left: 19px;
+    color:#999;
+}
+.nav-list{
+    float: right;
+} 
+.nav-list li{
+    float: left;
+    height: 15px;
+    border-right: solid 1px #999;
+    padding: 0 15px;
+    margin-top: 7px;
+    
+}
+.nav-list li a{
+    color: #999;
+}
+.nav-list .nav-list{
+    border: none;
+}
+.nav-list .nav-list-a{
+    color: red
+}
+
+
+.banner-wp2{
+    width: 990px;
+    height: 100px;
+    /* background: red; */
+    margin: 0 auto;
+    overflow: hidden;
+}
+    
+
+.log-jd{
+    float: left;
+    margin-top: 30px;
+}
+.search-wp{
+    width: 970px;
+    height: 40px;
+    /* background: yellow; */
+    margin-left: 650px;
+    margin-top: 45px;
+    /* float: left; */
+}
+.search-ipt{
+    height: 40px;
+    
+}
+.search-wp input{
+    width: 256px;
+    height: 22px;
+    float: left;
+    border: solid #971515;
+}
+.search-btn-a{
+    float: left;
+    width: 52px;
+    height: 28px;
+    background: #b61d1d;
+    color: #ffffff;
+    line-height: 28px;
+    text-align: center;
+}
+
+
+.shop-name{
+    width: 990px;
+    height: 40px;
+    background: #f3f3f3;
+    margin: 20px auto;
+}
+.checkbox{
+    float: left;
+    margin-top: 9px;
+}
+.shop-li{
+    float: right;
+}
+.shop-li li{
+    float:left;
+    margin-right: 75px;
+    margin-top: 12px;
+    /* padding-right: 10px; */
+}
+.shop-name span{
+    margin-left: 50px;
+    line-height: 40px;
+}
+#content-e{
+    width: 1000px;
+    /* min-height: 118px; */
+    margin: 0 auto;
+    border: solid 2px rgb(231, 224, 224);
+}
+.content-wp{
+    width: 990px;
+    height: 118px;
+    /* background: sandybrown; */
+    margin: 15px auto;
+    border: solid 1px;
+}
+.content-ck{
+    float: left;
+    margin-top: 20px;
+}
+.content-img{
+    width: 82px;
+    height: 82px;
+    float: left;
+    margin-top:20px;
+    margin-left:20px;
+}
+.content-img img{
+    width: 80px;
+    height: 80px;
+}
+.content-p{
+    width: 300px;
+    height: 76px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 8px;
+    /* background: lightblue; */
+}
+.content-price{
+    width: 80px;
+    height: 50px;
+    float: left;
+    margin-left: 150px;
+    margin-top: 23px;
+    
+}
+.content-ipt{
+    width: 100px;
+    height: 100px;
+    float: left;
+    /* margin-left: 35px; */
+    margin-top: 20px;
+
+} 
+.content-ipt .content-ipt-n{
+    width: 30px;
+}
+.content-sub{
+    width: 100px;
+    height: 80px;
+    margin-top: 22px;   
+    float: left;
+}
+.content-sub span{
+    margin-left: 23px;
+    /* margin-top: 2px; */
+   
+    
+}
+.addCartBtn{
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.close-wp{
+    width: 1000px;
+    height: 52px;
+    border: solid 1px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.close-ck{
+    float: left;
+    margin-top: 17px;
+}
+.close-price{
+    float: left;
+    margin-left: 750px;
+    margin-top: 20px;
+    
+}
+.close-price span{
+    color: red;
+    font-size: 18px;
+    /* margin-top: 20px; */
+    
+}
+.close-btn{
+    width: 94px;
+    height: 53px;
+    background: #e54346;
+    float: right;
+    line-height: 52px;
+    
+}
+.close-btn p{
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
+}
+
+
