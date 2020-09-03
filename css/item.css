@@ -142,6 +142,36 @@
     /* background: yellow; */
     margin-left: 50px;
     border: solid 2px #eaedf0;
+    position: relative;
+}
+
+#move{
+    /* background-image: url(); */
+    width: 220px;
+    height: 220px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: blue;
+    display: none;
+    opacity: 0.3;
+}
+#bimg{
+    width: 360px;
+    height: 360px;
+    position: absolute;
+    top: 0;
+    left: 430px;
+    /* background:yellow; */
+    display: none;
+    overflow: hidden;
+}
+#bimg img{
+    width: 800px;
+    height: 800px;
+    position: absolute;
+    top: 0px;
+    left:0px;
 }
 .product-picture img{
     width:380px;
@@ -149,6 +179,8 @@
     margin-left: 10px;
     margin-top: 10px;
 }
+
+
 .content-wp{
     width: 500px;
     height: 400px;
@@ -212,7 +244,7 @@
     /* width: 300px; */
     height: 46px;
     margin-top: 80px;
-    margin-left: -480px;
+    margin-left: -230px;
     float: left;
 }
 .number .number-n{

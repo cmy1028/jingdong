@@ -76,6 +76,7 @@
         <!-- <div class="product-picture">
             <img src="" alt="">
         </div>
+        
         <div class="content-wp">
             <div class="name-wp">
                 <img src="../img/35.png" alt="">
@@ -88,18 +89,35 @@
             <div class="content-bourn">
                 <p>配送到</p>
                 <input type="text" placeholder="北京朝阳区三环以内">
-            </div> -->
-
-            <!-- <div class="number">
-                <input type="button" value="_" class="number-sub">
-                <input type="text" value="1" class="number-n">
-                <input type="button" value="+" class="number-push">
-                <div class="cart-btn">
-                    <button>加入购物车</button>
-                </div>
-            </div> -->
-        <!-- </div>   -->
+            </div>         
+        </div>  -->    
+        
+        <div class="product-picture">
+            <img src="../img/" alt="">
+            <div id="move"></div>
+            <div id="bimg">
+                <img id="b-bimg" src="" alt="">
+            </div>
         </div>
+        <div class="content-wp">
+            <div class="name-wp">
+                <img src="../img/35.png" alt="">
+                <p class="sp-name"></p>
+            </div>
+            <div class="content-price">
+                <b>京东价</b>
+                <span></span>
+            <div>
+            <div class="content-bourn">
+                <p>配送到</p>
+                <input type="text" placeholder="北京朝阳区三环以内">
+            </div>
+            
+            
+        </div>  
+        
+        </div>  
+    
         <div class="number">
             <input type="button" value="_" class="number-sub">
             <input type="text" value="1" class="number-n">
@@ -121,28 +139,32 @@
                         console.log(data)
                         let obj = data.data
                         console.log(obj)
-                        let html = `
-                                <div class="product-picture">
-                                    <img src="${obj.pimg}" alt="">
-                                </div>
-                                <div class="content-wp">
-                                    <div class="name-wp">
-                                        <img src="../img/35.png" alt="">
-                                        <p>${obj.pdesc}</p>
-                                    </div>
-                                    <div class="content-price">
-                                        <b>京东价</b>
-                                        <span>￥${obj.pprice}元</span>
-                                    <div>
-                                    <div class="content-bourn">
-                                        <p>配送到</p>
-                                        <input type="text" placeholder="北京朝阳区三环以内">
-                                    </div>
+                        $('.product-picture img').attr("src",data.data.pimg)
+                        $('.sp-name').html(data.data.pdesc)
+                        $('.content-price span').html(data.data.pprice)
+                        // let html = `
+                        //         <div class="product-picture">
+                        //             <img src="${obj.pimg}" alt="">
+                                    
+                        //         </div>
+                        //         <div class="content-wp">
+                        //             <div class="name-wp">
+                        //                 <img src="../img/35.png" alt="">
+                        //                 <p>${obj.pdesc}</p>
+                        //             </div>
+                        //             <div class="content-price">
+                        //                 <b>京东价</b>
+                        //                 <span>￥${obj.pprice}元</span>
+                        //             <div>
+                        //             <div class="content-bourn">
+                        //                 <p>配送到</p>
+                        //                 <input type="text" placeholder="北京朝阳区三环以内">
+                        //             </div>
                                     
                                     
-                                </div>  
-                            `
-                        $('.item-wp').html(html)
+                        //         </div>  
+                        //     `
+                        // $('.item-wp').html(html)
                     })
                     // 商品数量+
                     $('.number-push').click(function(){
@@ -179,30 +201,58 @@
                             alert('加入购物车失败')
                         }
                         
-                    }
+                    }        
                     
                 })
-                // let addCartBtn = document.querySelector('.cart-btn button')
-                //     console.log(addCartBtn)
-                //     addCartBtn.onclick =async function(){
-                //         let uid = localStorage.getItem('id')
-                //         let pname = $('.number-n').val()
-                //         console.log(pname)
-                //         let params={
-                //             uid,
-                //             pid:id,
-                //             pname,
-                //         }
-                //         // let url = 'http://jx.xuzhixiang.top/ap/api/add-product.php',
-                //         try {
-                //             let res = await axios.get('http://jx.xuzhixiang.top/ap/api/add-product.php',{params})
-                //             console.log(res.data)
-                //             alert('加入购物车成功')
-                //         } catch (error) {
-                //             alert('加入购物车失败')
-                //         }
-                        
-                //     }
+
+                bigimg()
+            function bigimg(){
+                let bbox = document.querySelector('.product-picture');
+                let bmove = document.querySelector('#move');
+                let bbimg = document.querySelector('#bimg');
+                let b_bimg = document.querySelector('#b-bimg');
+
+                bbox.onmouseover = function(){
+                    bbimg.style.display = "block";
+                    bmove.style.display = 'block';
+                }
+                bbox.onmouseout = function(){
+                    bbimg.style.display = 'none'
+                    bmove.style.display = 'none'
+                }
+                bbox.onmousemove = function(e){
+                    //获取鼠标相对于视口（当前页面）的位置
+                    let x = e.clientX;
+                    // console.log(x)
+                    let y = e.clientY;
+                    let t = bbox.offsetTop;
+                    // console.log(t)
+                    let l = bbox.offsetLeft;
+                    let _left = x-l - bmove.offsetWidth/2;
+                    // let w = bmove.offsetWidth
+                    // console.log(w)
+                    // console.log(_left)
+                    let _top = y-t-bmove.offsetHeight/2;
+                    console.log(_top)
+                    if(_top<=0)
+                        _top=0;
+                    else if(_top>=bbox.offsetHeight-bmove.offsetHeight)
+                    _top = bbox.offsetHeight-bmove.offsetHeight;
+                    if(_left<=0)
+                    _left=0;
+                    else if(_left>=bbox.offsetWidth-bmove.offsetWidth)
+                    _left = bbox.offsetWidth-bmove.offsetWidth;
+
+                    bmove.style.top = _top+'px';
+                    bmove.style.left = _left+'px';
+                    let  w = _left/(bbox.offsetWidth-bmove.offsetWidth)
+                    let h = _top/(bbox.offsetHeight-bmove.offsetHeight)
+                    var b_bimg_top = (b_bimg.offsetHeight-bbimg.offsetHeight)*h;//计算大图的位置
+                    var b_bimg_left = (b_bimg.offsetWidth-bbimg.offsetWidth)*w;
+                    b_bimg.style.top = -b_bimg_top + "px";//设置大图的位置信息
+                    b_bimg.style.left = -b_bimg_left + "px"; 
+                }
+            }
         </script>
 </body>
 

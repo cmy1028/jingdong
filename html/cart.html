@@ -65,7 +65,7 @@
         </ul>
     </div>
     <div id="content-e">
-    <div class="content-wp">
+    <!-- <div class="content-wp">
         <div class="content-ck">
             <input type="checkbox">
         </div>
@@ -90,7 +90,7 @@
         <div>
             <button class="addCartBtn">删除</button>
         </div>
-    </div>
+    </div> -->
 </div>
     <div class="close-wp">
         <div class="close-ck">
@@ -125,27 +125,27 @@
                         <img src="${v.pimg}" alt="">
                     </div>
                     <div class="content-p">
-                        <p>"${v.pdesc}"</p>
+                        <p>${v.pdesc}</p>
                     </div>
                     <div class="content-price">
-                        ￥<span>"${v.pprice}"</span>
+                        ￥<span>${v.pprice}</span>
                     </div>
                     <div class="content-ipt">
-                        <input type="button" value="-" class="content-jian" data-id="${v.pid}" data-price="${v.pprice}">
-                        <input type="text" value="1" class="content-ipt-n">
-                        <input type="button" value="+" class="content-plus" data-id="${v.pid}" data-price="${v.pprice}">
-                    </div>
+                        <input type="button" value="-" class="content-jian" data-id=${v.pid} data-price=${v.pprice}>
+                        <input type="text" value="${v.pnum}" class="content-ipt-n">
+                        <input type="button" value="+" class="content-plus" data-id=${v.pid} data-price=${v.pprice}>
+                    </div>"
                     <div class="content-sub">
-                        <span>￥345.00</span>
+                        <span>${v.pnum*v.pprice}</span>
                     </div>
                     <div class="addCartBtn">
-                    <button data-id="${v.pid}">删除</button>
+                    <button data-id=${v.pid}>删除</button>
                     </div>
                 </div>
                 `
                 });
 
-                // $('#content-e').html(html)
+                $('#content-e').html(html)
                 delBtn()
                 upDataNumber()
                 checkBox()
@@ -161,17 +161,18 @@
                 let url='http://jx.xuzhixiang.top/ap/api/cart-delete.php'
                 $.get(url,{uid,pid},data=>{
                     console.log(data)
-                    $('.content-wp').remove()
+                    // $('.content-wp').empty()
+                    $(this).parent().parent().remove()
                     total()
                 })
             })
         }
         //修改商品数量
         function upDataNumber(){
-            let numberDel = document.querySelectorAll('.content-jian')
-            let numberAdd = document.querySelectorAll('.content-plus')
-            let iptNum = document.querySelectorAll('.content-ipt-n')
-            let contentSub = document.querySelectorAll('.content-sub')
+            let numberDel = document.querySelectorAll('.content-jian') //减
+            let numberAdd = document.querySelectorAll('.content-plus') //加
+            let iptNum = document.querySelectorAll('.content-ipt-n')  //商品数量
+            let contentSub = document.querySelectorAll('.content-sub') //小计价格
             //商品+
             numberAdd.forEach((btn,index)=>{
                 btn.onclick = function(){
@@ -181,7 +182,7 @@
                     let pnum = parseInt(iptNumber.value)+1
                     console.log(pnum)
                     let uid = localStorage.getItem('id')
-                    let pid = $('.content-plus').attr('data-id')
+                    let pid = $(this).attr('data-id')
                     let url = 'http://jx.xuzhixiang.top/ap/api/cart-update-num.php'
                     let params={
                         pnum,
@@ -191,8 +192,8 @@
                     axios.get(url,{params}).then(res=>{
                         console.log(res.data)
                         iptNumber.value = pnum
-                        let price = $('.content-plus').attr('data-price')
-                        contentSub[index].innerHTML = price*pname
+                        let price = $(this).attr('data-price')
+                        contentSub[index].innerHTML = price*pnum
                         total()
                     })
                 }
@@ -209,13 +210,13 @@
                     }
                     let pnum = parseInt(iptNumber.value)-1
                     let uid = localStorage.getItem('id')
-                    let pid = $('.content-jian').attr('data-id')
+                    let pid = $(this).attr('data-id')
                     let url = 'http://jx.xuzhixiang.top/ap/api/cart-update-num.php'
                     axios.get(url,{params:{uid,pid,pnum}}).then(res=>{
                         console.log(res.data)
                         iptNumber.value = pnum
-                        let price = $('.content-jian').attr('data-price')
-                        contentSub[index].innerHTML = price*pname
+                        let price = $(this).attr('data-price')
+                        contentSub[index].innerHTML = price*pnum
                         total()
                     })
                 }
@@ -224,12 +225,17 @@
         //单选和全选
         function checkBox(){
             let contentCk = document.querySelectorAll('.content-ck input') //单选框
-            let checkbox = document.querySelectorAll('.checkbox input') //全选框
-            let closeCk =document.querySelectorAll('close-ck input') //全选框
+            console.log(contentCk)
+            let checkbox = document.querySelector('.checkbox input') //全选框
+            console.log(checkbox)
+            let closeCk = document.querySelector('.close-ck input')
+            // let closeCk =document.querySelector('close-ck input') //全选框
+            console.log(closeCk)
             contentCk.forEach((ipt,index)=>{
                 ipt.onchange = function(){
                     console.log(ipt.checked)
                     let arr = [...contentCk]
+                    console.log(arr)
                     let allColSelect = arr.every(v => v.checked === true)
                     checkbox.checked = allColSelect
                     closeCk.checked = allColSelect
@@ -239,18 +245,18 @@
             checkbox.onchange = function(){
                 contentCk.forEach(v => v.checked = checkbox.checked)
                 if(checkbox.checked == true){
-                    closeCk.checked == true
+                    closeCk.checked = true
                 }else{
-                    closeCk.checked == false
+                    closeCk.checked = false
                 }
                 total()
             }
             closeCk.onchange = function(){
-                contentCk.forEach(v => v.checked = checkbox.checked)
+                contentCk.forEach(v => v.checked = closeCk.checked)
                 if(closeCk.checked == true){
-                    checkbox.checked == true
+                    checkbox.checked = true
                 }else{
-                    checkbox.checked == false
+                    checkbox.checked = false
                 }
                 total()
             }
@@ -258,15 +264,21 @@
         //总价
         function total(){
             let closePrice =document.querySelector('.close-price span')//总价
+            console.log(closePrice)
             let contentCk = document.querySelectorAll('.content-ck input') //单选框
+            console.log(contentCk)
             let contentSub = document.querySelectorAll('.content-sub span') //小计
+            console.log(contentSub)
             let count = 0
             contentCk.forEach((ipt,index)=>{
                 if(ipt.checked==true){
                     count+=parseInt(contentSub[index].innerText)
+                   
                 }
+                console.log(count)
             })
             closePrice.innerText = count
+            console.log(count)
         }
 
     </script>

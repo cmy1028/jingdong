@@ -29,13 +29,19 @@
     font-size: 20px;
     color: #999999;
 }
+
+/* #wp{
+    width: 1000px;
+    height: 500px;
+    background: wheat;
+} */
 .reg-ipt{
     width: 350px;
     height: 400px;
-    /* background: #da5757; */
+    background:rgb(236, 230, 230);
     margin: 50px auto;
     overflow: hidden;
-  background: linear-gradient(#e66465, #9198e5)
+  /* background: linear-gradient(#e66465, #9198e5) */
 }
 .reg-ipt h1{
     margin-left: 115px;

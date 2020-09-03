@@ -192,6 +192,17 @@
             </div>
         </div>
     </div>
+<div class="scoll-wp">
+    <ul class="scroll-wp2">
+        <li>京东秒杀</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>顶部</li>
+    </ul>
+</div>
 
     <!-- 倒计时+轮播 -->
     <div id="list-extend">
@@ -1531,7 +1542,7 @@
 
 
             <div class="product-list-d">
-                <a href="" class="product-list-w">
+                <!-- <a href="" class="product-list-w">
                     <img src="" alt="">
                     <p>御邪黄金999足金金珠纯金转运珠3D硬金百搭万能针式御心链手链</p>
                     <span>￥ 198.00</span>
@@ -1555,7 +1566,7 @@
                     <img src="" alt="">
                     <p>御邪黄金999足金金珠纯金转运珠3D硬金百搭万能针式御心链手链</p>
                     <span>￥ 198.00</span>
-                </a>
+                </a> -->
             </div>
 
         <!-- </div> -->
@@ -1606,6 +1617,7 @@
             console.log(uid)
             // 获取商品列表
             $.get("http://jx.xuzhixiang.top/ap/api/productlist.php", {
+                pagesize:10,
                 uid
             }, data => {
                 console.log(data.data)
@@ -1627,7 +1639,27 @@
                 });
             })
 
+            $(window).scroll(function(){
+                var st = $(this).scrollTop()
+                if(st>500){
+                    $('.scoll-wp').fadeIn()
+                }else{
+                    $('.scoll-wp').fadeOut()
+                }
+                
+                $('.scoll-wp li:last').click(function(){
+                    console.log(22)
+                    $('html,body').animate({
+                        scrollTop :0
+                    },500)
+                    return false;
+                })
+          
+            })
+
         })
+
+       
 
         let a = 0
         // let div = document.querySelector('.cd-timer')
@@ -1637,7 +1669,7 @@
         house.innerHTML = a
         min.innerHTML = a
         send.innerHTML = a
-        let start = new Date('2020 9-1 16:30')
+        let start = new Date('2020 9-3 16:30')
         console.log(start)
         let timer = setInterval(() => {
             let now = new Date()
